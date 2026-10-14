@@ -1,0 +1,12 @@
+Would you like to play guess a number (a) or nim (b)? (type a/b)a
+Pick a number between 1 and 100.
+I will guess it in as few guesses as possible!
+is 50 too high, too low, or correct?low
+Is 75 too high, low, or correct?correct
+Your number is 75.
+Play again? (y/n)y
+Pick a number between 1 and 100.
+I will guess it in as few guesses as possible!
+is 50 too high, too low, or correct?correct
+Your number is 50.
+Play again? (y/n)n

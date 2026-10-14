@@ -1,0 +1,11 @@
+Welcome to the text decrypter!
+Enter 1 for encrypt or 2 for decrypt: 1
+Enter text to encrypt: apple
+Enter the key: qwertyuiopasdfghjklzxcvbnm
+qhhst
+
+Welcome to the text decrypter!
+Enter 1 for encrypt or 2 for decrypt: 2
+Enter encrypted text: qhhst
+Enter the key: qwertyuiopasdfghjklzxcvbnm
+apple
