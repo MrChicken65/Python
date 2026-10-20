@@ -1,30 +1,8 @@
-def toPirate(text):
-    pirate_words = {
-        # Greetings
-        "hello": "avast",
-        "excuse": "arr",
 
-        # Nouns
-        "sir": "matey",
-        "boy": "matey",
-        "man": "matey",
-        "madam": "proud beauty",
-        "officer": "foul blaggart",
+import csv
 
-        # Articles
-        "the": "th'",
-        "my": "me",
-        "your": "yer",
-        "is": "be",
-        "are": "be",
-        "am": "be",
-        "and": "an'",
 
-        # Places
-        "kitchen": "galley",
-        "hotel": "fleabag inn"
-    }
-
+def toPirate(text, pirate_words):
     words = text.split()
     translation = []
 
@@ -38,5 +16,22 @@ def toPirate(text):
 
     return " ".join(translation)
 
-normal_text = input("Enter normal text here: ")
-print(toPirate(normal_text))
+
+# Read dictionary from csv
+with open("dict.csv", "r", newline="") as file:
+    reader = csv.reader(file)
+    keys = next(reader)
+    replacements = next(reader)
+
+    pirate_words = dict(zip(keys, replacements))
+
+# Read the input from the txt file
+with open("in.txt", "r") as file:
+    normal_text = file.read()
+
+# translate it
+pirate_text = toPirate(normal_text, pirate_words)
+
+# save it in another txt file, use w to overwrite
+with open("out.txt", "w") as file:
+    file.write(pirate_text)
